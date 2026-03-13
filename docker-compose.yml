@@ -1,0 +1,10 @@
+services:
+  ironclaw:
+    build:
+      context: https://github.com/nearai/ironclaw.git#staging
+    image: ghcr.io/zefiroconsultancy/ironclaw:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: unless-stopped
